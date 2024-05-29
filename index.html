@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News App</title>
+</head>
+<link rel="stylesheet" href="style.css">
+<body>
+
+    <div class="nav">
+
+        <div class="main-nav container flex">
+            <div class="logo">
+                <a href="#" onclick="reload()">News</a>
+            </div>
+            <div class="nav-links">
+                <ul class="flex">
+                    <li class="nav-item hover-link" id="Business" onclick="onNavItemClick('Business')">Business</li>
+                    <li class="nav-item hover-link" id="Entertainment" onclick="onNavItemClick('Entertainment')">Entertainment</li>
+                    <li class="nav-item hover-link" id="Sports" onclick="onNavItemClick('Sports')">Sports</li>
+                    <li class="nav-item hover-link" id="Tech" onclick="onNavItemClick('Tech')">Tech</li>
+                    <li class="nav-item hover-link" id="Education" onclick="onNavItemClick('Education')">Education</li>
+                </ul>
+            </div>
+            <div class="search-bar flex">
+                <input type="text" class="news-input" placeholder="e.g. Health" id="news-input">
+                <button class="search-btn" id="search-btn">Search</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="main">
+        <div class="cards-container container flex" id="cards-container">
+        </div>
+    </div>
+    
+    <template id="template-news-card">
+        <div class="card">
+            <div class="card-header">
+                <img src="https://placehold.co/400x200" alt="news image" id="news-img">
+            </div>
+            <div class="card-content">
+                <h3 id="news-title">This is the Title</h3>
+                <h6 class="news-source" id="news-source">End Gadges 26/0/2024</h6>
+                <p class="news-desc" id="news-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, minus mollitia suscipit labore est rerum eligendi non incidunt perspiciatis ipsa.</p>
+            </div>
+        </div>
+    </template>
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>
